@@ -47,6 +47,10 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.SoThuThuDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuongDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGiaDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnThemMA = new System.Windows.Forms.Button();
             this.btnXoaMA = new System.Windows.Forms.Button();
             this.btnSuaMA = new System.Windows.Forms.Button();
@@ -58,10 +62,8 @@
             this.TenMA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonGiaMA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GhiChuMA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoThuThuDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuongDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonGiaDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnDatTiec = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -225,6 +227,27 @@
             this.dataGridView2.Size = new System.Drawing.Size(475, 74);
             this.dataGridView2.TabIndex = 7;
             // 
+            // SoThuThuDV
+            // 
+            this.SoThuThuDV.HeaderText = "STT";
+            this.SoThuThuDV.Name = "SoThuThuDV";
+            // 
+            // TenDichVu
+            // 
+            this.TenDichVu.HeaderText = "Tên dịch vụ";
+            this.TenDichVu.Name = "TenDichVu";
+            // 
+            // SoLuongDV
+            // 
+            this.SoLuongDV.HeaderText = "Số lượng ";
+            this.SoLuongDV.Name = "SoLuongDV";
+            // 
+            // DonGiaDV
+            // 
+            this.DonGiaDV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DonGiaDV.HeaderText = "Đơn giá";
+            this.DonGiaDV.Name = "DonGiaDV";
+            // 
             // btnThemMA
             // 
             this.btnThemMA.Location = new System.Drawing.Point(27, 197);
@@ -313,32 +336,32 @@
             this.GhiChuMA.HeaderText = "Ghi chú";
             this.GhiChuMA.Name = "GhiChuMA";
             // 
-            // SoThuThuDV
+            // btnDatTiec
             // 
-            this.SoThuThuDV.HeaderText = "STT";
-            this.SoThuThuDV.Name = "SoThuThuDV";
+            this.btnDatTiec.Location = new System.Drawing.Point(564, 246);
+            this.btnDatTiec.Name = "btnDatTiec";
+            this.btnDatTiec.Size = new System.Drawing.Size(133, 33);
+            this.btnDatTiec.TabIndex = 10;
+            this.btnDatTiec.Text = "Đặt tiệc";
+            this.btnDatTiec.UseVisualStyleBackColor = true;
             // 
-            // TenDichVu
+            // btnExit
             // 
-            this.TenDichVu.HeaderText = "Tên dịch vụ";
-            this.TenDichVu.Name = "TenDichVu";
-            // 
-            // SoLuongDV
-            // 
-            this.SoLuongDV.HeaderText = "Số lượng ";
-            this.SoLuongDV.Name = "SoLuongDV";
-            // 
-            // DonGiaDV
-            // 
-            this.DonGiaDV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DonGiaDV.HeaderText = "Đơn giá";
-            this.DonGiaDV.Name = "DonGiaDV";
+            this.btnExit.Location = new System.Drawing.Point(564, 315);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(133, 29);
+            this.btnExit.TabIndex = 11;
+            this.btnExit.Text = "Thoát";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // DatTiec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(832, 488);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnDatTiec);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnSuaDV);
             this.Controls.Add(this.btnXoaDV);
@@ -410,5 +433,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDichVu;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongDV;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonGiaDV;
+        private System.Windows.Forms.Button btnDatTiec;
+        private System.Windows.Forms.Button btnExit;
     }
 }

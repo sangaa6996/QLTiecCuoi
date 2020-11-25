@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace lab_4
+namespace GUI
 {
-    public partial class DatTiec : Form
+    public partial class DichVu : Form
     {
-        public DatTiec()
+        public DichVu()
         {
             InitializeComponent();
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
