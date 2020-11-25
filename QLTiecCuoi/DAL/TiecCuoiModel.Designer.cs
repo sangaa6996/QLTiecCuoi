@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\pc\Documents\GitHub\QLTiecCuoi\QLTiecCuoi\DAL\TiecCuoiModel.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\QLTiecCuoi\QLTiecCuoi\QLTiecCuoi\DAL\TiecCuoiModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
