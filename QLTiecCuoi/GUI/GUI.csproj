@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>486f69bf-26ab-4fa8-8011-c4e43ac4cbdb</ProjectGuid>
+    <ProjectGuid>{486F69BF-26AB-4FA8-8011-C4E43AC4CBDB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>GUI</RootNamespace>
@@ -31,24 +31,91 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="DatTiec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatTiec.Designer.cs">
+      <DependentUpon>DatTiec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DichVu.Designer.cs">
+      <DependentUpon>DichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DsSanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DsSanh.designer.cs">
+      <DependentUpon>DsSanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoaDon.Designer.cs">
+      <DependentUpon>HoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManHinhChinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManHinhChinh.Designer.cs">
+      <DependentUpon>ManHinhChinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MonAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MonAn.Designer.cs">
+      <DependentUpon>MonAn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatTiec.resx">
+      <DependentUpon>DatTiec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DichVu.resx">
+      <DependentUpon>DichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DsSanh.resx">
+      <DependentUpon>DsSanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManHinhChinh.resx">
+      <DependentUpon>ManHinhChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonAn.resx">
+      <DependentUpon>MonAn.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>
