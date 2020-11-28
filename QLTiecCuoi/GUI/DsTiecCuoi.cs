@@ -17,9 +17,14 @@ namespace lab_4
             InitializeComponent();
         }
 
+        private void label5_Click(object sender, EventArgs e)
+        {
 
-        
+        }
 
-       
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

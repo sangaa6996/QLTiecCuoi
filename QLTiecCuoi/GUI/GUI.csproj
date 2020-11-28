@@ -62,17 +62,17 @@
     <Compile Include="DsSanh.designer.cs">
       <DependentUpon>DsSanh.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="DsTiecCuoi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="DsTiecCuoi.designer.cs">
+      <DependentUpon>DsTiecCuoi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="BaoCaoDoanhThu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="BaoCaoDoanhThu.designer.cs">
+      <DependentUpon>BaoCaoDoanhThu.cs</DependentUpon>
     </Compile>
     <Compile Include="HoaDon.cs">
       <SubType>Form</SubType>
@@ -93,6 +93,11 @@
       <DependentUpon>MonAn.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DatTiec.resx">
@@ -104,11 +109,11 @@
     <EmbeddedResource Include="DsSanh.resx">
       <DependentUpon>DsSanh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="DsTiecCuoi.resx">
+      <DependentUpon>DsTiecCuoi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="BaoCaoDoanhThu.resx">
+      <DependentUpon>BaoCaoDoanhThu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManHinhChinh.resx">
       <DependentUpon>ManHinhChinh.cs</DependentUpon>
@@ -116,6 +121,16 @@
     <EmbeddedResource Include="MonAn.resx">
       <DependentUpon>MonAn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nhahangtieccuoi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
