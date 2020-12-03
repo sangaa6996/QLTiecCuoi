@@ -1,0 +1,16 @@
+C:\ahsd\qltc\QLTiecCuoi\QLTiecCuoi\GUI\bin\Debug\GUI.dll
+C:\ahsd\qltc\QLTiecCuoi\QLTiecCuoi\GUI\bin\Debug\GUI.pdb
+C:\ahsd\qltc\QLTiecCuoi\QLTiecCuoi\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+C:\ahsd\qltc\QLTiecCuoi\QLTiecCuoi\GUI\obj\Debug\lab_4.DatTiec.resources
+C:\ahsd\qltc\QLTiecCuoi\QLTiecCuoi\GUI\obj\Debug\GUI.DichVu.resources
+C:\ahsd\qltc\QLTiecCuoi\QLTiecCuoi\GUI\obj\Debug\lab_4.DsSanh.resources
+C:\ahsd\qltc\QLTiecCuoi\QLTiecCuoi\GUI\obj\Debug\lab_4.Form2.resources
+C:\ahsd\qltc\QLTiecCuoi\QLTiecCuoi\GUI\obj\Debug\lab_4.Form3.resources
+C:\ahsd\qltc\QLTiecCuoi\QLTiecCuoi\GUI\obj\Debug\GUI.HoaDon.resources
+C:\ahsd\qltc\QLTiecCuoi\QLTiecCuoi\GUI\obj\Debug\GUI.ManHinhChinh.resources
+C:\ahsd\qltc\QLTiecCuoi\QLTiecCuoi\GUI\obj\Debug\GUI.MonAn.resources
+C:\ahsd\qltc\QLTiecCuoi\QLTiecCuoi\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\ahsd\qltc\QLTiecCuoi\QLTiecCuoi\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\ahsd\qltc\QLTiecCuoi\QLTiecCuoi\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\ahsd\qltc\QLTiecCuoi\QLTiecCuoi\GUI\obj\Debug\GUI.dll
+C:\ahsd\qltc\QLTiecCuoi\QLTiecCuoi\GUI\obj\Debug\GUI.pdb

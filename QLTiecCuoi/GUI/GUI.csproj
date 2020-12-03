@@ -74,6 +74,12 @@
     <Compile Include="BaoCaoDoanhThu.designer.cs">
       <DependentUpon>BaoCaoDoanhThu.cs</DependentUpon>
     </Compile>
+    <Compile Include="BCDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BCDoanhThu.Designer.cs">
+      <DependentUpon>BCDoanhThu.cs</DependentUpon>
+    </Compile>
     <Compile Include="HoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BCDoanhThu.resx">
+      <DependentUpon>BCDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DatTiec.resx">
       <DependentUpon>DatTiec.cs</DependentUpon>
     </EmbeddedResource>
