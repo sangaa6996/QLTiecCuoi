@@ -4,16 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{486F69BF-26AB-4FA8-8011-C4E43AC4CBDB}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <ProjectGuid>{3AEA5B7A-0424-4524-9C9C-EF3655EA712A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>GUI</RootNamespace>
     <AssemblyName>GUI</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -31,6 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -39,21 +49,15 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="DatTiec.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DatTiec.Designer.cs">
-      <DependentUpon>DatTiec.cs</DependentUpon>
-    </Compile>
     <Compile Include="DichVu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DichVu.Designer.cs">
+    <Compile Include="DichVu.designer.cs">
       <DependentUpon>DichVu.cs</DependentUpon>
     </Compile>
     <Compile Include="DsSanh.cs">
@@ -62,73 +66,19 @@
     <Compile Include="DsSanh.designer.cs">
       <DependentUpon>DsSanh.cs</DependentUpon>
     </Compile>
-    <Compile Include="DsTiecCuoi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DsTiecCuoi.designer.cs">
-      <DependentUpon>DsTiecCuoi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BaoCaoDoanhThu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCaoDoanhThu.designer.cs">
-      <DependentUpon>BaoCaoDoanhThu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BCDoanhThu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BCDoanhThu.Designer.cs">
-      <DependentUpon>BCDoanhThu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HoaDon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HoaDon.Designer.cs">
-      <DependentUpon>HoaDon.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ManHinhChinh.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ManHinhChinh.Designer.cs">
-      <DependentUpon>ManHinhChinh.cs</DependentUpon>
-    </Compile>
     <Compile Include="MonAn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MonAn.Designer.cs">
+    <Compile Include="MonAn.designer.cs">
       <DependentUpon>MonAn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="BCDoanhThu.resx">
-      <DependentUpon>BCDoanhThu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DatTiec.resx">
-      <DependentUpon>DatTiec.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="DichVu.resx">
       <DependentUpon>DichVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DsSanh.resx">
       <DependentUpon>DsSanh.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DsTiecCuoi.resx">
-      <DependentUpon>DsTiecCuoi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCaoDoanhThu.resx">
-      <DependentUpon>BaoCaoDoanhThu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HoaDon.resx">
-      <DependentUpon>HoaDon.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ManHinhChinh.resx">
-      <DependentUpon>ManHinhChinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MonAn.resx">
       <DependentUpon>MonAn.cs</DependentUpon>
@@ -136,13 +86,30 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\nhahangtieccuoi.jpg" />
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\1.jpg" />
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{3d2fcbcc-9b95-44d2-874c-063c570e3359}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

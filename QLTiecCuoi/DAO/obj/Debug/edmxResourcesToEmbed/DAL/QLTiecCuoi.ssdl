@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLTiecCuoiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BAOCAODS">
+    <Key>
+      <PropertyRef Name="ID_BaoCao" />
+    </Key>
+    <Property Name="ID_BaoCao" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Thang" Type="int" />
+    <Property Name="TDoanhThu" Type="float" />
+  </EntityType>
+  <EntityType Name="CTBaoCaoDS">
+    <Key>
+      <PropertyRef Name="ID_BaoCao" />
+      <PropertyRef Name="ID_TiecCuoi" />
+    </Key>
+    <Property Name="ID_BaoCao" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="ID_TiecCuoi" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Ngay" Type="date" />
+    <Property Name="TiLe" Type="float" />
+    <Property Name="DoanhThu" Type="float" />
+  </EntityType>
+  <EntityType Name="CTHoaDon">
+    <Key>
+      <PropertyRef Name="ID_HoaDon" />
+      <PropertyRef Name="ID_DichVu" />
+    </Key>
+    <Property Name="ID_HoaDon" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="ID_DichVu" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="SoLuong" Type="int" />
+  </EntityType>
+  <EntityType Name="CTTiecCuoi">
+    <Key>
+      <PropertyRef Name="ID_TiecCuoi" />
+      <PropertyRef Name="ID_MonAn" />
+      <PropertyRef Name="ID_DichVu" />
+    </Key>
+    <Property Name="ID_TiecCuoi" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="ID_MonAn" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="ID_DichVu" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="GhiChuMA" Type="nchar" MaxLength="10" />
+    <Property Name="SoLuongDV" Type="int" />
+  </EntityType>
+  <EntityType Name="DichVu">
+    <Key>
+      <PropertyRef Name="ID_DichVu" />
+    </Key>
+    <Property Name="ID_DichVu" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="DonGia" Type="float" />
+  </EntityType>
+  <EntityType Name="HoaDon">
+    <Key>
+      <PropertyRef Name="ID_HoaDon" />
+    </Key>
+    <Property Name="NgayHD" Type="date" />
+    <Property Name="ID_KhachHang" Type="nchar" MaxLength="10" />
+    <Property Name="SoLuongBan" Type="int" />
+    <Property Name="DonGiaBan" Type="float" />
+    <Property Name="ID_HoaDon" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KHACHHANG">
+    <Key>
+      <PropertyRef Name="ID_KhachHang" />
+    </Key>
+    <Property Name="TenCR" Type="nvarchar" MaxLength="50" />
+    <Property Name="TenCD" Type="nvarchar" MaxLength="50" />
+    <Property Name="DienThoai" Type="int" />
+    <Property Name="ID_KhachHang" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LoaiSanh">
+    <Key>
+      <PropertyRef Name="ID_LoaiSanh" />
+    </Key>
+    <Property Name="ID_LoaiSanh" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="TenLoaiSanh" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="MonAn">
+    <Key>
+      <PropertyRef Name="ID_MonAn" />
+    </Key>
+    <Property Name="ID_MonAn" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="DonGia" Type="float" />
+  </EntityType>
+  <EntityType Name="SANH">
+    <Key>
+      <PropertyRef Name="ID_Sanh" />
+    </Key>
+    <Property Name="TenSanh" Type="nchar" MaxLength="10" />
+    <Property Name="ID_LoaiSanh" Type="nchar" MaxLength="10" />
+    <Property Name="SoLuonBanTD" Type="int" />
+    <Property Name="DonGiaBanTT" Type="float" />
+    <Property Name="TinhTrang" Type="bit" />
+    <Property Name="GhiChu" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID_Sanh" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TIECCUOI">
+    <Key>
+      <PropertyRef Name="ID_TiecCuoi" />
+    </Key>
+    <Property Name="Ngay" Type="date" />
+    <Property Name="Ca" Type="int" />
+    <Property Name="ID_Sanh" Type="nchar" MaxLength="10" />
+    <Property Name="TienDatCoc" Type="float" />
+    <Property Name="SobanDuTru" Type="int" />
+    <Property Name="ID_KhachHang" Type="nchar" MaxLength="10" />
+    <Property Name="ID_TiecCuoi" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_CTBaoCaoDS_BAOCAODS">
+    <End Role="BAOCAODS" Type="Self.BAOCAODS" Multiplicity="1" />
+    <End Role="CTBaoCaoDS" Type="Self.CTBaoCaoDS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BAOCAODS">
+        <PropertyRef Name="ID_BaoCao" />
+      </Principal>
+      <Dependent Role="CTBaoCaoDS">
+        <PropertyRef Name="ID_BaoCao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTBaoCaoDS_TIECCUOI">
+    <End Role="TIECCUOI" Type="Self.TIECCUOI" Multiplicity="1" />
+    <End Role="CTBaoCaoDS" Type="Self.CTBaoCaoDS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIECCUOI">
+        <PropertyRef Name="ID_TiecCuoi" />
+      </Principal>
+      <Dependent Role="CTBaoCaoDS">
+        <PropertyRef Name="ID_TiecCuoi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTHoaDon_DichVu">
+    <End Role="DichVu" Type="Self.DichVu" Multiplicity="1" />
+    <End Role="CTHoaDon" Type="Self.CTHoaDon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DichVu">
+        <PropertyRef Name="ID_DichVu" />
+      </Principal>
+      <Dependent Role="CTHoaDon">
+        <PropertyRef Name="ID_DichVu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTHoaDon_HoaDon">
+    <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="1" />
+    <End Role="CTHoaDon" Type="Self.CTHoaDon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HoaDon">
+        <PropertyRef Name="ID_HoaDon" />
+      </Principal>
+      <Dependent Role="CTHoaDon">
+        <PropertyRef Name="ID_HoaDon" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTTiecCuoi_DichVu">
+    <End Role="DichVu" Type="Self.DichVu" Multiplicity="1" />
+    <End Role="CTTiecCuoi" Type="Self.CTTiecCuoi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DichVu">
+        <PropertyRef Name="ID_DichVu" />
+      </Principal>
+      <Dependent Role="CTTiecCuoi">
+        <PropertyRef Name="ID_DichVu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTTiecCuoi_MonAn">
+    <End Role="MonAn" Type="Self.MonAn" Multiplicity="1" />
+    <End Role="CTTiecCuoi" Type="Self.CTTiecCuoi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MonAn">
+        <PropertyRef Name="ID_MonAn" />
+      </Principal>
+      <Dependent Role="CTTiecCuoi">
+        <PropertyRef Name="ID_MonAn" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTTiecCuoi_TIECCUOI">
+    <End Role="TIECCUOI" Type="Self.TIECCUOI" Multiplicity="1" />
+    <End Role="CTTiecCuoi" Type="Self.CTTiecCuoi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIECCUOI">
+        <PropertyRef Name="ID_TiecCuoi" />
+      </Principal>
+      <Dependent Role="CTTiecCuoi">
+        <PropertyRef Name="ID_TiecCuoi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HoaDon_KHACHHANG">
+    <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="1" />
+    <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="KHACHHANG">
+        <PropertyRef Name="ID_KhachHang" />
+      </Principal>
+      <Dependent Role="HoaDon">
+        <PropertyRef Name="ID_HoaDon" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SANH_LoaiSanh">
+    <End Role="LoaiSanh" Type="Self.LoaiSanh" Multiplicity="0..1" />
+    <End Role="SANH" Type="Self.SANH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiSanh">
+        <PropertyRef Name="ID_LoaiSanh" />
+      </Principal>
+      <Dependent Role="SANH">
+        <PropertyRef Name="ID_LoaiSanh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TIECCUOI_KHACHHANG">
+    <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="0..1" />
+    <End Role="TIECCUOI" Type="Self.TIECCUOI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHACHHANG">
+        <PropertyRef Name="ID_KhachHang" />
+      </Principal>
+      <Dependent Role="TIECCUOI">
+        <PropertyRef Name="ID_KhachHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TIECCUOI_SANH">
+    <End Role="SANH" Type="Self.SANH" Multiplicity="0..1" />
+    <End Role="TIECCUOI" Type="Self.TIECCUOI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SANH">
+        <PropertyRef Name="ID_Sanh" />
+      </Principal>
+      <Dependent Role="TIECCUOI">
+        <PropertyRef Name="ID_Sanh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QLTiecCuoiModelStoreContainer">
+    <EntitySet Name="BAOCAODS" EntityType="Self.BAOCAODS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CTBaoCaoDS" EntityType="Self.CTBaoCaoDS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CTHoaDon" EntityType="Self.CTHoaDon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CTTiecCuoi" EntityType="Self.CTTiecCuoi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DichVu" EntityType="Self.DichVu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HoaDon" EntityType="Self.HoaDon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KHACHHANG" EntityType="Self.KHACHHANG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoaiSanh" EntityType="Self.LoaiSanh" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MonAn" EntityType="Self.MonAn" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SANH" EntityType="Self.SANH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TIECCUOI" EntityType="Self.TIECCUOI" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_CTBaoCaoDS_BAOCAODS" Association="Self.FK_CTBaoCaoDS_BAOCAODS">
+      <End Role="BAOCAODS" EntitySet="BAOCAODS" />
+      <End Role="CTBaoCaoDS" EntitySet="CTBaoCaoDS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTBaoCaoDS_TIECCUOI" Association="Self.FK_CTBaoCaoDS_TIECCUOI">
+      <End Role="TIECCUOI" EntitySet="TIECCUOI" />
+      <End Role="CTBaoCaoDS" EntitySet="CTBaoCaoDS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTHoaDon_DichVu" Association="Self.FK_CTHoaDon_DichVu">
+      <End Role="DichVu" EntitySet="DichVu" />
+      <End Role="CTHoaDon" EntitySet="CTHoaDon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTHoaDon_HoaDon" Association="Self.FK_CTHoaDon_HoaDon">
+      <End Role="HoaDon" EntitySet="HoaDon" />
+      <End Role="CTHoaDon" EntitySet="CTHoaDon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTTiecCuoi_DichVu" Association="Self.FK_CTTiecCuoi_DichVu">
+      <End Role="DichVu" EntitySet="DichVu" />
+      <End Role="CTTiecCuoi" EntitySet="CTTiecCuoi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTTiecCuoi_MonAn" Association="Self.FK_CTTiecCuoi_MonAn">
+      <End Role="MonAn" EntitySet="MonAn" />
+      <End Role="CTTiecCuoi" EntitySet="CTTiecCuoi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTTiecCuoi_TIECCUOI" Association="Self.FK_CTTiecCuoi_TIECCUOI">
+      <End Role="TIECCUOI" EntitySet="TIECCUOI" />
+      <End Role="CTTiecCuoi" EntitySet="CTTiecCuoi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HoaDon_KHACHHANG" Association="Self.FK_HoaDon_KHACHHANG">
+      <End Role="KHACHHANG" EntitySet="KHACHHANG" />
+      <End Role="HoaDon" EntitySet="HoaDon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SANH_LoaiSanh" Association="Self.FK_SANH_LoaiSanh">
+      <End Role="LoaiSanh" EntitySet="LoaiSanh" />
+      <End Role="SANH" EntitySet="SANH" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TIECCUOI_KHACHHANG" Association="Self.FK_TIECCUOI_KHACHHANG">
+      <End Role="KHACHHANG" EntitySet="KHACHHANG" />
+      <End Role="TIECCUOI" EntitySet="TIECCUOI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TIECCUOI_SANH" Association="Self.FK_TIECCUOI_SANH">
+      <End Role="SANH" EntitySet="SANH" />
+      <End Role="TIECCUOI" EntitySet="TIECCUOI" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

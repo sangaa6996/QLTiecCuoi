@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
 
 namespace GUI
 {
@@ -15,6 +16,14 @@ namespace GUI
         public DichVu()
         {
             InitializeComponent();
+            Load();
+        }
+        public void Load()
+        {
+            DichVu_BUS.Instance.Binding(cbTen);
+            txtDonGia.DataBindings.Clear();
+            txtDonGia.DataBindings.Add("Text", cbTen.DataSource, "DonGia");
+            txtDonGia.Enabled=false;
         }
     }
 }

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="577d7ca55e65477e8a0888a32b49c59e" Name="Diagram1" ZoomLevel="55">
+        <EntityTypeShape EntityType="QLTiecCuoiModel.BAOCAOD" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTiecCuoiModel.CTBaoCaoD" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTiecCuoiModel.CTHoaDon" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTiecCuoiModel.CTTiecCuoi" Width="1.5" PointX="8.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTiecCuoiModel.DichVu" Width="1.5" PointX="6" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTiecCuoiModel.HoaDon" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTiecCuoiModel.KHACHHANG" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTiecCuoiModel.LoaiSanh" Width="1.5" PointX="1.5" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTiecCuoiModel.MonAn" Width="1.5" PointX="6" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTiecCuoiModel.SANH" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTiecCuoiModel.sysdiagram" Width="1.5" PointX="7.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTiecCuoiModel.TIECCUOI" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="QLTiecCuoiModel.FK_CTBaoCaoDS_BAOCAODS" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTiecCuoiModel.FK_CTBaoCaoDS_TIECCUOI" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTiecCuoiModel.FK_CTHoaDon_DichVu" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTiecCuoiModel.FK_CTHoaDon_HoaDon" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTiecCuoiModel.FK_CTTiecCuoi_DichVu" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTiecCuoiModel.FK_CTTiecCuoi_MonAn" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTiecCuoiModel.FK_CTTiecCuoi_TIECCUOI" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTiecCuoiModel.FK_HoaDon_KHACHHANG" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTiecCuoiModel.FK_TIECCUOI_KHACHHANG" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTiecCuoiModel.FK_SANH_LoaiSanh" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTiecCuoiModel.FK_TIECCUOI_SANH" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("GUI")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft Corporation")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("GUI")]
-[assembly: AssemblyCopyright("Copyright © Microsoft Corporation 2020")]
+[assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("486f69bf-26ab-4fa8-8011-c4e43ac4cbdb")]
+[assembly: Guid("3aea5b7a-0424-4524-9c9c-ef3655ea712a")]
 
 // Version information for an assembly consists of the following four values:
 //
