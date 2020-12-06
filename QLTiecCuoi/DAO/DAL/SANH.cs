@@ -23,7 +23,7 @@ namespace DAO.DAL
         public string TenSanh { get; set; }
         public string ID_LoaiSanh { get; set; }
         public Nullable<int> SoLuonBanTD { get; set; }
-        public double DonGiaBanTT { get; set; }
+        public Nullable<double> DonGiaBanTT { get; set; }
         public Nullable<bool> TinhTrang { get; set; }
         public string GhiChu { get; set; }
         public string ID_Sanh { get; set; }

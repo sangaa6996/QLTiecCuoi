@@ -14,7 +14,7 @@ namespace DAO.DAL
     
     public partial class CTTiecCuoi
     {
-        public string ID_TiecCuoi { get; set; }
+        public int ID_TiecCuoi { get; set; }
         public string ID_MonAn { get; set; }
         public string ID_DichVu { get; set; }
         public string GhiChuMA { get; set; }

@@ -7,8 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
+using DTO;
 
-namespace lab_4
+namespace GUI
 {
     public partial class DatTiec : Form
     {
@@ -16,7 +18,10 @@ namespace lab_4
         {
             InitializeComponent();
         }
-
+        public void Load()
+        {
+            
+        }
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace lab_4
+namespace GUI
 {
-    public partial class Form2 : Form
+    public partial class DsTiecCuoi : Form
     {
-        public Form2()
+        public DsTiecCuoi()
         {
             InitializeComponent();
         }

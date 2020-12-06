@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
 
 namespace GUI
 {
@@ -15,8 +16,11 @@ namespace GUI
         public DsSanh()
         {
             InitializeComponent();
+            Load();
         }
-
-        
+        public void Load()
+        {
+            DSSanh_BUS.Instance.Load(dgvDS);
+        }
     }
 }

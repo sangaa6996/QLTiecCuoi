@@ -32,7 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSL = new System.Windows.Forms.TextBox();
             this.txtDonGia = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -44,11 +44,11 @@
             // dgvDichVu
             // 
             this.dgvDichVu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDichVu.Location = new System.Drawing.Point(39, 50);
+            this.dgvDichVu.Location = new System.Drawing.Point(44, 32);
             this.dgvDichVu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvDichVu.Name = "dgvDichVu";
             this.dgvDichVu.RowHeadersWidth = 62;
-            this.dgvDichVu.Size = new System.Drawing.Size(360, 231);
+            this.dgvDichVu.Size = new System.Drawing.Size(359, 266);
             this.dgvDichVu.TabIndex = 0;
             // 
             // label1
@@ -81,13 +81,13 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Đơn giá";
             // 
-            // textBox2
+            // txtSL
             // 
-            this.textBox2.Location = new System.Drawing.Point(558, 100);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(148, 26);
-            this.textBox2.TabIndex = 2;
+            this.txtSL.Location = new System.Drawing.Point(558, 100);
+            this.txtSL.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSL.Name = "txtSL";
+            this.txtSL.Size = new System.Drawing.Size(148, 26);
+            this.txtSL.TabIndex = 2;
             // 
             // txtDonGia
             // 
@@ -140,12 +140,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1023, 371);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cbTen);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtDonGia);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtSL);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -165,7 +165,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSL;
         private System.Windows.Forms.TextBox txtDonGia;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;

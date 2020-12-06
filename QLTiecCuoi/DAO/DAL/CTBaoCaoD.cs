@@ -15,7 +15,7 @@ namespace DAO.DAL
     public partial class CTBaoCaoD
     {
         public string ID_BaoCao { get; set; }
-        public string ID_TiecCuoi { get; set; }
+        public int ID_TiecCuoi { get; set; }
         public Nullable<System.DateTime> Ngay { get; set; }
         public Nullable<double> TiLe { get; set; }
         public Nullable<double> DoanhThu { get; set; }

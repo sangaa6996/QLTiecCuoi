@@ -18,7 +18,6 @@ namespace DAO.DAL
         public TIECCUOI()
         {
             this.CTBaoCaoDS = new HashSet<CTBaoCaoD>();
-            this.CTTiecCuois = new HashSet<CTTiecCuoi>();
         }
     
         public Nullable<System.DateTime> Ngay { get; set; }
@@ -27,12 +26,11 @@ namespace DAO.DAL
         public Nullable<double> TienDatCoc { get; set; }
         public Nullable<int> SobanDuTru { get; set; }
         public string ID_KhachHang { get; set; }
-        public string ID_TiecCuoi { get; set; }
+        public int ID_TiecCuoi { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTBaoCaoD> CTBaoCaoDS { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CTTiecCuoi> CTTiecCuois { get; set; }
+        public virtual CTTiecCuoi CTTiecCuoi { get; set; }
         public virtual KHACHHANG KHACHHANG { get; set; }
         public virtual SANH SANH { get; set; }
     }

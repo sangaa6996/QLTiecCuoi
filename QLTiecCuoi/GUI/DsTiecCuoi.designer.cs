@@ -1,6 +1,6 @@
-﻿namespace lab_4
+﻿namespace GUI
 {
-    partial class Form2
+    partial class DsTiecCuoi
     {
         /// <summary>
         /// Required designer variable.

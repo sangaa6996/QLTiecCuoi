@@ -54,6 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatTiec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatTiec.designer.cs">
+      <DependentUpon>DatTiec.cs</DependentUpon>
+    </Compile>
     <Compile Include="DichVu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,24 @@
     <Compile Include="DsSanh.designer.cs">
       <DependentUpon>DsSanh.cs</DependentUpon>
     </Compile>
+    <Compile Include="DsTiecCuoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DsTiecCuoi.designer.cs">
+      <DependentUpon>DsTiecCuoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoaDon.designer.cs">
+      <DependentUpon>HoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManHinhChinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManHinhChinh.designer.cs">
+      <DependentUpon>ManHinhChinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="MonAn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,11 +98,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DatTiec.resx">
+      <DependentUpon>DatTiec.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DichVu.resx">
       <DependentUpon>DichVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DsSanh.resx">
       <DependentUpon>DsSanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DsTiecCuoi.resx">
+      <DependentUpon>DsTiecCuoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoaDon.resx">
+      <DependentUpon>HoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManHinhChinh.resx">
+      <DependentUpon>ManHinhChinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MonAn.resx">
       <DependentUpon>MonAn.cs</DependentUpon>
@@ -109,6 +145,10 @@
     <ProjectReference Include="..\BUS\BUS.csproj">
       <Project>{3d2fcbcc-9b95-44d2-874c-063c570e3359}</Project>
       <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{74535f3a-5217-42e5-b9c7-0bba6acc9524}</Project>
+      <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

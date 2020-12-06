@@ -19,7 +19,7 @@
             <PropertyRef Name="ID_TiecCuoi" />
           </Key>
           <Property Name="ID_BaoCao" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="ID_TiecCuoi" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="ID_TiecCuoi" Type="int" Nullable="false" />
           <Property Name="Ngay" Type="date" />
           <Property Name="TiLe" Type="float" />
           <Property Name="DoanhThu" Type="float" />
@@ -36,10 +36,8 @@
         <EntityType Name="CTTiecCuoi">
           <Key>
             <PropertyRef Name="ID_TiecCuoi" />
-            <PropertyRef Name="ID_MonAn" />
-            <PropertyRef Name="ID_DichVu" />
           </Key>
-          <Property Name="ID_TiecCuoi" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="ID_TiecCuoi" Type="int" Nullable="false" />
           <Property Name="ID_MonAn" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="ID_DichVu" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="GhiChuMA" Type="nchar" MaxLength="10" />
@@ -117,7 +115,7 @@
           <Property Name="TienDatCoc" Type="float" />
           <Property Name="SobanDuTru" Type="int" />
           <Property Name="ID_KhachHang" Type="nchar" MaxLength="10" />
-          <Property Name="ID_TiecCuoi" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="ID_TiecCuoi" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
         </EntityType>
         <Association Name="FK_CTBaoCaoDS_BAOCAODS">
           <End Role="BAOCAODS" Type="Self.BAOCAODS" Multiplicity="1" />
@@ -193,7 +191,7 @@
         </Association>
         <Association Name="FK_CTTiecCuoi_TIECCUOI">
           <End Role="TIECCUOI" Type="Self.TIECCUOI" Multiplicity="1" />
-          <End Role="CTTiecCuoi" Type="Self.CTTiecCuoi" Multiplicity="*" />
+          <End Role="CTTiecCuoi" Type="Self.CTTiecCuoi" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="TIECCUOI">
               <PropertyRef Name="ID_TiecCuoi" />
@@ -329,7 +327,7 @@
             <PropertyRef Name="ID_TiecCuoi" />
           </Key>
           <Property Name="ID_BaoCao" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="ID_TiecCuoi" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="ID_TiecCuoi" Type="Int32" Nullable="false" />
           <Property Name="Ngay" Type="DateTime" Precision="0" />
           <Property Name="TiLe" Type="Double" />
           <Property Name="DoanhThu" Type="Double" />
@@ -350,10 +348,8 @@
         <EntityType Name="CTTiecCuoi">
           <Key>
             <PropertyRef Name="ID_TiecCuoi" />
-            <PropertyRef Name="ID_MonAn" />
-            <PropertyRef Name="ID_DichVu" />
           </Key>
-          <Property Name="ID_TiecCuoi" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="ID_TiecCuoi" Type="Int32" Nullable="false" />
           <Property Name="ID_MonAn" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="ID_DichVu" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="GhiChuMA" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
@@ -444,9 +440,9 @@
           <Property Name="TienDatCoc" Type="Double" />
           <Property Name="SobanDuTru" Type="Int32" />
           <Property Name="ID_KhachHang" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="ID_TiecCuoi" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="ID_TiecCuoi" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="CTBaoCaoDS" Relationship="Self.FK_CTBaoCaoDS_TIECCUOI" FromRole="TIECCUOI" ToRole="CTBaoCaoDS" />
-          <NavigationProperty Name="CTTiecCuois" Relationship="Self.FK_CTTiecCuoi_TIECCUOI" FromRole="TIECCUOI" ToRole="CTTiecCuoi" />
+          <NavigationProperty Name="CTTiecCuoi" Relationship="Self.FK_CTTiecCuoi_TIECCUOI" FromRole="TIECCUOI" ToRole="CTTiecCuoi" />
           <NavigationProperty Name="KHACHHANG" Relationship="Self.FK_TIECCUOI_KHACHHANG" FromRole="TIECCUOI" ToRole="KHACHHANG" />
           <NavigationProperty Name="SANH" Relationship="Self.FK_TIECCUOI_SANH" FromRole="TIECCUOI" ToRole="SANH" />
         </EntityType>
@@ -524,7 +520,7 @@
         </Association>
         <Association Name="FK_CTTiecCuoi_TIECCUOI">
           <End Role="TIECCUOI" Type="Self.TIECCUOI" Multiplicity="1" />
-          <End Role="CTTiecCuoi" Type="Self.CTTiecCuoi" Multiplicity="*" />
+          <End Role="CTTiecCuoi" Type="Self.CTTiecCuoi" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="TIECCUOI">
               <PropertyRef Name="ID_TiecCuoi" />

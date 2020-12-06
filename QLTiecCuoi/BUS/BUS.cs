@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAO;
+using DTO;
 
 namespace BUS
 {
@@ -28,10 +29,18 @@ namespace BUS
             //data.DataSource = DichVu_DAO.Instance.Bingding();
             data.DisplayMember="Id";
         }
+        public void Load(DataGridView dataGridView)
+        {
+            dataGridView.DataSource = DichVu_DAO.Instance.Load();
+        }
         //public void DataBingding(TextBox txt)
         //{
         //    txt.DataBindings.Add("Text", DichVu_DAO.Instance.DataBingding(), "DonGia");
         //}
+        public CTTIECCUOI Add(CTTIECCUOI ct)
+        {
+            return ct;
+        }
     }
     public class DSSanh_BUS
     {
@@ -48,6 +57,23 @@ namespace BUS
         public void Load(DataGridView data)
         {
             data.DataSource = DSSanh_DAO.Instance.Load();
+        }
+    }
+    public class ManHinhChinh_BUS
+    {
+        private static ManHinhChinh_BUS instance;
+        public static ManHinhChinh_BUS Instance
+        {
+            get
+            {
+                if (instance == null)
+                    instance = new ManHinhChinh_BUS();
+                return instance;
+            }
+        }
+        public void Add()
+        {
+            ManHinhChinh_DAO.Instance.Add();
         }
     }
 }

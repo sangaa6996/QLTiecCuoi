@@ -9,7 +9,7 @@ namespace DTO
     public class DICHVU
     {
         string id;
-        double donGia;
+        Nullable<double> donGia;
 
         public DICHVU()
         {
@@ -21,7 +21,7 @@ namespace DTO
             this.donGia = donGia;
         }
 
-        public double DonGia { get => donGia; set => donGia = value; }
+        public Nullable<double> DonGia { get => donGia; set => donGia = value; }
         public string Id { get => id; set => id = value; }
     }
     public class KHACHHANG
@@ -56,7 +56,7 @@ namespace DTO
         string id_LoaiSanh;
         string id_Sanh;
         Nullable<int> soluongTD;
-        double dongia;
+        Nullable<double> dongia;
         Nullable<bool> tinhTrang;
         string ghiChu;
 
@@ -64,12 +64,39 @@ namespace DTO
         public string Id_LoaiSanh { get => id_LoaiSanh; set => id_LoaiSanh = value; }
         public string Id_Sanh { get => id_Sanh; set => id_Sanh = value; }
         public Nullable<int> SoluongTD { get => soluongTD; set => soluongTD = value; }
-        public double Dongia { get => dongia; set => dongia = value; }
+        public Nullable<double> Dongia { get => dongia; set => dongia = value; }
         public Nullable<bool> TinhTrang { get => tinhTrang; set => tinhTrang = value; }
         public string GhiChu { get => ghiChu; set => ghiChu = value; }
 
         public Sanh()
         {
         }
+    }
+    public class CTTIECCUOI
+    {
+        public string ID_TiecCuoi { get; set; }
+        public string ID_MonAn { get; set; }
+        public string ID_DichVu { get; set; }
+        public string GhiChuMA { get; set; }
+        public Nullable<int> SoLuongDV { get; set; }
+
+        public virtual DICHVU DichVu { get; set; }
+        public virtual MONAN MonAn { get; set; }
+        public virtual TiecCuoi TIECCUOI { get; set; }
+    }
+    public class MONAN
+    {
+        public string ID_MonAn { get; set; }
+        public Nullable<double> DonGia { get; set; }
+    }
+    public class TiecCuoi
+    {
+        public Nullable<System.DateTime> Ngay { get; set; }
+        public Nullable<int> Ca { get; set; }
+        public string ID_Sanh { get; set; }
+        public Nullable<double> TienDatCoc { get; set; }
+        public Nullable<int> SobanDuTru { get; set; }
+        public string ID_KhachHang { get; set; }
+        public string ID_TiecCuoi { get; set; }
     }
 }

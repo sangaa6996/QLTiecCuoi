@@ -39,16 +39,15 @@ namespace DAO
         }
         public object Load()
         {
-            var dsChiTiet = from ct in database.CTTiecCuois select ct;
+            var dsChiTiet = from ct in database.CTTiecCuois select new { ID_DichVu = ct.ID_DichVu, SoLuongDV = ct.SoLuongDV };
             return dsChiTiet.ToList();
         }
-        public bool Add(DICHVU dv)
+        public void Add(CTTIECCUOI ct)
         {
-            string ID_DichVu= dv.Id;
-            double DonGia = dv.DonGia;
-            dv = new DICHVU(ID_DichVu, DonGia);
-            
-            return false;
+            CTTiecCuoi cTTiec = new CTTiecCuoi();
+            cTTiec.ID_DichVu = ct.ID_DichVu;
+            cTTiec.SoLuongDV = ct.SoLuongDV;
+            database.CTTiecCuois.Add(cTTiec);
         }
     }
     public class DSSanh_DAO
@@ -92,6 +91,44 @@ namespace DAO
         {
             SANH sanh = database.SANHs.Where(s => s.ID_Sanh == sa.Id_Sanh).SingleOrDefault();
             return false;
+        }
+    }
+    public class DatTiec_DAO
+    {
+        private static DatTiec_DAO instance;
+        QLTiecCuoiEntities database = new QLTiecCuoiEntities();
+
+        public static DatTiec_DAO Instance
+        {
+            get
+            {
+                if (instance == null)
+                    instance = new DatTiec_DAO();
+                return instance;
+            }
+        }
+        public void Load()
+        {
+        }
+    }
+    public class ManHinhChinh_DAO
+    {
+        private static ManHinhChinh_DAO instance;
+        QLTiecCuoiEntities database = new QLTiecCuoiEntities();
+
+        public static ManHinhChinh_DAO Instance
+        {
+            get
+            {
+                if (instance == null)
+                    instance = new ManHinhChinh_DAO();
+                return instance;
+            }
+        }
+        public void Add()
+        {
+            TIECCUOI tc = new TIECCUOI();
+            database.TIECCUOIs.Add(tc);
         }
     }
 }
